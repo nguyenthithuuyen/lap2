@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="tinhHinhChuNhat()  ">tính</button>
+<p id="result"></p>
+<script>
+    function tinhHinhChuNhat() {
+        let result = "";
+        let cd = 15;
+        let cr = 5;
+        for (let i = 1; i <= cr; i++) {
+            for (let j = 1; j <= cd; j++) {
+                if (j != 1 && j != cd && i != 1 && i != cr) {
+                    result += "&nbsp;&nbsp;";
+                } else {
+                    result += "*";
+                }
+            }
+            result += "<br>"
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>
